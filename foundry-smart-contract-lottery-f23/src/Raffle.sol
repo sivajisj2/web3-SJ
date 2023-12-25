@@ -68,6 +68,8 @@ contract Raffle is VRFConsumerBaseV2 {
 
     event RaffleEnter(address indexed player);
     event WinnerPicked(address indexed winner);
+    event RequestedRaffleWinner(uint256 indexed requestId);
+
 
     // mapping (address => uint) name;
 
@@ -144,6 +146,7 @@ contract Raffle is VRFConsumerBaseV2 {
             i_callbackGasLimit,
             NUM_WORDS
         );
+        emit RequestedRaffleWinner(requestId);
     }
 
 
@@ -214,4 +217,33 @@ contract Raffle is VRFConsumerBaseV2 {
     function getPlayer(uint256 indexOfPlayer) external view returns(address) {
         return s_players[indexOfPlayer];
     }
+
+    // What if I need to test using the output of the events.
+
+    function getRecentWinner() external view returns(address){
+        return s_recentWinner;
+    }
+    
+
+    function getLengthOfPlayer() external view returns(uint256){
+         
+         return s_players.length ; 
+
+    }
+
+
+    function getLastTimeStamp() external view returns(uint256){
+       
+       return s_lastTimeStamp ; 
+    }
+
+    
+
+
+
+
+
+    
+
+    
 }
