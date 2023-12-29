@@ -24,5 +24,15 @@ library PriceConverter {
         uint256 ethAmountInUsd = (ethPrice * ethAmount) / 1000000000000000000;
         // the actual ETH/USD conversion rate, after adjusting the extra 0s.
         return ethAmountInUsd;
+
     }
 }
+
+/*•	Programming languages :   JavaScript, Python, TypeScript, Solidity
+•	Data bases                         :     Mysql, Mongodb.               
+•	Frameworks                      :     NodeJS, ExpressJs, NextJS, ReactJS, Redux, Bootstrap & Tailwind.
+•	GUI Tools                           :     Figma design, Git, Visual Studio Code, Remix IDE , Postman,                 Github. 
+•	Back-End technologies      :    NodeJS, ExpressJs, NextJS.
+•	Other Tools                          :    Figma design, Git.
+•	Blockchain Technologies   :    Foundry, , Smart contracts Testing & Scripting.     
+*/
