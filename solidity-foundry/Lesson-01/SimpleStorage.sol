@@ -1,8 +1,7 @@
-// SPDX-License-Identifier: MIT 
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
-contract SimpleStorage {
-
+contract SimpleStorage{
       uint256 myFavouriteNumber;
 
       struct Person{
@@ -24,7 +23,6 @@ contract SimpleStorage {
     function retrive() public  view returns(uint256){
         return myFavouriteNumber;
     }
-
     function addPerson(string memory _name, uint256 _favouriteNumber)public {
        Person memory newPerson = Person(_favouriteNumber,_name);
        listOfPeople.push(newPerson); 
