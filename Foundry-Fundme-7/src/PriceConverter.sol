@@ -22,7 +22,8 @@ library PriceConverter {
     function getConversionRate(
         uint256 ethAmount,
         AggregatorV3Interface priceFeed
-    ) internal view returns (uint256) {
+    ) internal view returns (uint256) 
+{
         uint256 ethPrice = getPrice(priceFeed);
         uint256 ethAmountInUsd = (ethPrice * ethAmount) / 1000000000000000000;
         // the actual ETH/USD conversion rate, after adjusting the extra 0s.
